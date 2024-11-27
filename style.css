@@ -1,0 +1,234 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+
+	background-image: url("assets/images/musicbg.jpg");
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* flex-wrap: wrap; */
+}
+
+.music-player {
+	width: 400px;
+	border-radius: 10px;
+	padding: 25px 35px;
+	text-align: center;
+	background: radial-gradient(
+		circle at 74.2% 50.9%,
+		rgb(14, 72, 222) 5.2%,
+		rgb(3, 22, 65) 75.3%
+	);
+	
+}
+
+.shift{
+	position: relative;
+    left: -211px;
+}
+
+nav {
+	display: flex;
+	color: white;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+nav .title {
+	padding-top: 10px;
+}
+nav .circle {
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 50%;
+	line-height: 40px;
+	color: blue;
+	box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+.song-img {
+	width: 220px;
+	border: 8px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+.music-player h1 {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.music-player p {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
+#progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+#progress::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	border: 8px solid #fff;
+	background: blue;
+	border-radius: 50%;
+	box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    color: blue;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div:nth-child(2){
+    transform: scale(1.4);
+}
+
+/* new changes */
+.choose{
+	border:2px solid black;
+	height:50px;
+	width:200px;
+	position: relative;
+	top: -45px;
+    left: 49px;
+	color:#fff;
+}
+
+.folderInput{
+	font-size: 24px;
+	height: 200px;
+}
+
+  /* Hide the default file input */
+  input[type="file"] {
+	display: none;
+  }
+
+  /* Style the custom button */
+  .custom-file-input {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: white;
+	background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	left: 79px;
+	width: 476px;
+	top: -63px;
+	visibility: hidden;
+}
+
+  .custom-file-input:hover {
+	background-color: #0056b3;
+  }
+
+  /* Scrollable div for song list */
+  .song-list-container {
+	width: 1197%;
+	height: 520px;
+	margin: 20px auto;
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+	overflow-y: scroll;
+	visibility: hidden;
+	position: relative;
+	left: 77px;
+	top: -79px;
+}
+
+  #songList {
+	list-style-type: none; /* Remove default bullets */
+	padding: 0;
+  }
+
+  /* Style for each song item inside a "dice" */
+  .song-item {
+	display: inline-block;
+  width: 97%;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #0056b3;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  }
+
+  .song-item:hover {
+	background-color: #1ff9c6;
+	transform: translateY(-4px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .fa-plus{
+     cursor: pointer;
+  }
+ .fa-backward{
+	cursor: pointer;
+ }
+
+ .fa-forward{
+	cursor: pointer;
+ }
+
+ .fa-play{
+	cursor: pointer;
+ }
+  .song-title{
+	font-size: 16px;
+    color: white;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+  /* .marquee-text {
+    animation: marquee 3s linear infinite;
+	position: relative;
+	left:-300px;
+	right:-20px;
+	overflow-x: hidden; 
+     font-size: 24px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+} */
